@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Song Form</title>
+    <link rel="stylesheet" href="/fileUpload/static/fileUpload.css">
+</head>
+<body>
+
+<div class="upload-form">
+    <h2>Upload Your Song</h2>
+    <form id="uploadForm" enctype="multipart/form-data" method="POST">
+        <div class="form-group">
+            <label for="songName">Song Name</label>
+            <input type="text" id="songName" name="songName" placeholder="Enter song name" required>
+        </div>
+        <div class="form-group">
+            <label for="songGenre">Song Genre</label>
+            <select id="songGenre" name="songGenre" required>
+                <option value="" disabled selected>Select Genre</option>
+                <option value="Romantic">Romantic Songs</option>
+                <option value="English">English Songs</option>
+                <option value="Phonk">Phonk Songs</option>
+                <option value="Hollywood">Hollywood Songs</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="songAuthor">Song Author</label>
+            <input type="text" id="songAuthor" name="songAuthor" placeholder="Enter song author" required>
+        </div>
+        <div class="form-group">
+            <label for="songImage">Song Image Link</label>
+            <input type="text" id="songImage" name="songImage" placeholder="Paste song image link (Square image recommended)" required>
+        </div>
+        <div class="form-group">
+            <label for="fileUpload" class="custom-upload-btn">Choose Audio File</label>
+            <input type="file" id="fileUpload" name="fileUpload" accept="audio/*" required>
+            <span class="upload-filename"></span>
+            <img src="" alt="Song Preview" class="upload-preview" id="previewImage">
+        </div>
+        <button type="submit" id="uploadButton">Upload</button>
+        <div class="loader" id="loader"></div>
+    </form>
+</div>
+
+<script src="/fileUpload/static/fileUpload.js"></script>
+
+</body>
+</html>
