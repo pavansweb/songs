@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 5000;
 const UPLOAD_FOLDER = 'uploads';
 const SONG_DATABASE_FILE = 'songDatabase.js';
 const GITHUB_USERNAME = "pavansweb";
-const GITHUB_ACCESS_TOKEN = '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';
+const GITHUB_ACCESS_TOKEN = '/';
 const USER_AGENT = 'HorizonTunesApp';
 
 // Ensure the upload folder exists
